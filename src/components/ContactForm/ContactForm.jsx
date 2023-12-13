@@ -21,10 +21,9 @@ export const ContactForm = () => {
       alert(`${name} is already in contacts.`);
       return;
     }
-    evt.target.reset();
-    console.log({ name, number, id: nanoid() });
 
     dispatch(addContact({ name, number, id: nanoid() }));
+    evt.target.reset();
   };
 
   return (

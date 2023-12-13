@@ -5,8 +5,6 @@ const intitialStateContact = {
 };
 
 export const contactsReducer = (state = intitialStateContact, action) => {
-  // action -> { type: "products/deleteProduct", payload: "w1231" }
-  // action -> { type: "products/addProduct", payload: { id: "w1231", price: 10, title: "Samsung", ... } }
   switch (action.type) {
     case DELETECONTACTS: {
       return {
@@ -17,7 +15,7 @@ export const contactsReducer = (state = intitialStateContact, action) => {
       };
     }
     case ADDCONTACTS: {
-      // state.products = [...state.products, action.payload];❌
+     
       return {
         ...state,
         contacts: [...state.contacts, action.payload], // ✅

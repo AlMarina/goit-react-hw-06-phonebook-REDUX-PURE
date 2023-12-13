@@ -11,7 +11,6 @@ export const ContactList = () => {
   const filterContact = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter)
   );
-  console.log(filterContact);
 
   return (
     <ul>
