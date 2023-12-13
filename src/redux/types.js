@@ -1,0 +1,3 @@
+export const DELETECONTACTS = 'DELETECONTACTS ';
+export const ADDCONTACTS = 'ADDCONTACTS';
+export const FILTERVALUE = 'FILTERVALUE';

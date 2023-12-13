@@ -1,6 +1,15 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { Container, InputFilter, Label } from './Filter.styled';
+import { setFilter } from 'redux/action';
 
-export const Filter = ({ value, onChange }) => {
+export const Filter = () => {
+  const filterState = useSelector(state => state.filterStore.filter);
+  const dispatch = useDispatch();
+
+  const onChange = evt => {
+    dispatch(setFilter(evt.target.value.trim().toLowerCase()));
+  };
+
   return (
     <Container>
       <Label>
@@ -10,7 +19,7 @@ export const Filter = ({ value, onChange }) => {
           name="filter"
           required
           onChange={onChange}
-          value={value}
+          value={filterState}
         />
       </Label>
     </Container>
